@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title></title>
+    <style>
+     
+.container
+      {
+        height:612px;
+        width:500px;
+        margin:auto;
+      
+      }
+       ul
+      {
+        list-style-type:none;
+        line-height:200%; 
+        margin:auto;
+      }
+      ul li
+      {
+           border:1px solid grey;
+           width:150px;
+           margin-top:15px;
+           text-align:center;
+           font-weight:bold;
+      }
+      #list .ui-selected 
+      { 
+         background: #F39814; color: white; 
+      }
+      .default
+       {
+          background:#d1c6cc;
+          border: 1px solid #DDDDDD;
+          color: #333333;
+       }
+      .default1 
+      {
+          background:#e44c01;
+          border: 1px solid #DDDDDD;
+          color: #333333;
+       }
+     
+   </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(function(){
+        //selectable and sortable methods perform on list and list1 to select and sort the list items//
+        $("#list").selectable();
+        $("#list1").sortable();
+       
+      });
+    </script>
+  </head>
+  <body>
+  <div class="container">
+    <h2>SELECTABLE</h2>
+    <ul id ="list">
+        <li class="default1">Product 1</li>
+        <li class="default1">Product 2</li>
+        <li class="default1">Product 3</li>
+        <li class="default1">Product 4</li>
+        <li class="default1">Product 5</li>
+    </ul>
+    <h2>SORTABLE</h2>
+    <ul id ="list1">
+      <li class="default">Product 1</li>
+      <li class="default">Product 2</li>
+      <li class="default">Product 3</li>
+      <li class="default">Product 4</li>
+      <li class="default">Product 5</li>
+    </ul>
+ </div> 
+   
+  
+    
+  </body>
+</html>
