@@ -10,11 +10,13 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>Therapy</title>
-<meta name="description" content="">
-<meta name="keywords" content="" />
-<meta name="author" content="">
-<?php include "lib/top.inc.php" ?>
+	<meta name="description" content="">
+	<meta name="keywords" content="" />
+	<meta name="author" content="">
+
+	<?php include "lib/top.inc.php" ?>
 </head>
+	
 <body>
 <?php include "lib/header.inc.php" ?>
 <!-- Showcase Section Starts here -->
@@ -62,7 +64,7 @@
 								$_SESSION['regid'] 			= $userData['id'];
 
 								if(isset($userData)){
-			        	            header('location: '.$basepath); //if login
+			        	            header('location: '.$basepath.'book_appointment.php'); //if login
 								}
 								else{
 									header('location: '.$basepath.'login.php');	//if not valid user nd pwd
