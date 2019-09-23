@@ -16,15 +16,94 @@
 
         <?php include "lib/top.inc.php" ?>
 
-        <!--No javascript files after this -->
+        <!-- javascript files after this -->
         <script type="text/javascript" src="js/vendor/jquery-1.11.3.min.js"></script>  
         <link href="css/contactStyles.css" rel="stylesheet" type="text/css" />  
 
         <script type='text/javascript'>
-            $(document).ready(function(){
+		
+      
+		 $(document).ready(function(){
                 $('#send_consultation').click(function(e){
-                    //stop the form from being submitted
-                    e.preventDefault();
+					
+					
+					var contactFNameEN=$("#contactFNameEN").val();
+					var contactLNameEN=$("#contactLNameEN").val();
+					var contactAccountUsername=$("#contactAccountUsername").val();
+					var contactcode=$("#contactcode").val();
+					var contactTelephone=$("#contactTelephone").val();
+					var address=$("#contactTelephone").val();
+					var password=$("#password").val();
+					
+					
+					if(contactFNameEN=="" || contactLNameEN=="" || contactAccountUsername=="" || contactTelephone=="" || address=="" || password=="" )
+					{
+						
+						if(contactFNameEN=="")
+						{
+							$("#contactFNameEN").css("borderColor","red");
+						}
+						else{
+							$("#contactFNameEN").css("borderColor","");
+						}
+						if(contactLNameEN=="")
+						{
+							$("#contactLNameEN").css("borderColor","red");
+						}
+						else{
+							$("#contactLNameEN").css("borderColor","");
+						}
+						
+						if(contactAccountUsername=="")
+						{
+							$("#contactAccountUsername").css("borderColor","red");
+						}
+						else{
+							$("#contactAccountUsername").css("borderColor","");
+						}
+						
+						
+						if(contactcode=="")
+						{
+							$("#contactcode").css("borderColor","red");
+						}
+						else{
+							$("#contactcode").css("borderColor","");
+						}
+						
+						
+						if(contactTelephone=="")
+						{
+							$("#contactTelephone").css("borderColor","red");
+						}
+						else{
+							$("#contactTelephone").css("borderColor","");
+						}
+						
+						if(address=="")
+						{
+							$("#address").css("borderColor","red");
+						}
+						else{
+							$("#address").css("borderColor","");
+						}
+						
+						
+						if(password=="")
+						{
+							$("#password").css("borderColor","red");
+						}
+						else{
+							$("#password").css("borderColor","");
+						}
+						
+						
+						return false;
+						
+					}
+					else{
+					
+						e.preventDefault();
                     $.post("scripts/register.php", $("#consultantion").serialize(),function(result){
                         if(result.trim() == 'sent'){
                             $("#consultantion").remove();
@@ -37,8 +116,13 @@
 
                         }
                     });
+					return true;
+		}
+		  //stop the form from being submitted
+            				
                 });
             });
+		
         </script>
     </head>
     <body>
@@ -115,7 +199,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <div id='mail_success' class='success' style="color:green;font-size:16px;">Details Saved.
+                            <div id='mail_success' class='success' style="color:green;font-size:16px;">Thank you for Registeration in Body Therpy. 
                             <br /></div>
                             <div id='mail_fail' style="color:red; text-align:center; font-size:16px;" class='error'>There was an error while trying to save your details, please try again later. </div>
                             <div class="row">
