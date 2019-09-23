@@ -31,8 +31,6 @@
 		</div>
 	</div>
 </section>
-
-
 <!--Registration start -->
 <div class="container" style="margin-top:30px;">
     <div id="get_cons">
